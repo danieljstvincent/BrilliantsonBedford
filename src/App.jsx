@@ -6,6 +6,8 @@ import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import ContactUs from './pages/ContactUs';
+import FAQ from './pages/FAQ';
+import HowWeWork from './pages/HowWeWork';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/how-we-work" element={<HowWeWork />} />
       </Routes>
     </Router>
   );

@@ -80,7 +80,7 @@ const ContactUs: React.FC = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="relative container mx-auto px-6 py-20">
+      <div id="contact-form" className="relative container mx-auto px-6 py-20">
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
             <div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Code2, Rocket, Zap, Sparkles, Database, Cloud, Shield } from 'lucide-react';
+import { Code2, Rocket, Zap, Sparkles, Database, Cloud, Shield, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const services = [
@@ -122,6 +123,13 @@ const Services: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how we can help bring your micro-SaaS idea to life
           </p>
+          <Link
+            to="/contact-us"
+            className="group inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+          >
+            Let's Get Started
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
 

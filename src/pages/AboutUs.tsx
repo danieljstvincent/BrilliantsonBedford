@@ -1,5 +1,6 @@
 import React from 'react';
-import { Sparkles, Rocket, Zap } from 'lucide-react';
+import { Sparkles, Rocket, Zap, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import danielImage from '../images/daniel_stvincent_3D_image.png';
 
 const AboutUs: React.FC = () => {
@@ -124,6 +125,25 @@ const AboutUs: React.FC = () => {
               every project we undertake.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="relative container mx-auto px-6 py-20">
+        <div className="max-w-4xl mx-auto text-center p-12 bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-sm rounded-3xl border border-purple-500/30">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+            Ready to Work Together?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's turn your micro-SaaS idea into a reality. Get in touch and let's build something brilliant together.
+          </p>
+          <Link
+            to="/contact-us"
+            className="group inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+          >
+            Let's Get Started
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
 

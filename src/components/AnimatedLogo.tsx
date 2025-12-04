@@ -46,3 +46,6 @@ const AnimatedLogo: React.FC = () => {
 };
 
 export default AnimatedLogo;
+
+
+

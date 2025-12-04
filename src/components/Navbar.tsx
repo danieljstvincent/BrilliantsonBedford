@@ -60,6 +60,26 @@ const Navbar: React.FC = () => {
             >
               Contact US
             </Link>
+            <Link
+              to="/how-we-work"
+              className={`text-sm font-medium transition-all duration-300 ${
+                isActive('/how-we-work')
+                  ? 'text-cyan-400 border-b-2 border-cyan-400 pb-1'
+                  : 'text-gray-300 hover:text-cyan-400'
+              }`}
+            >
+              How We Work
+            </Link>
+            <Link
+              to="/faq"
+              className={`text-sm font-medium transition-all duration-300 ${
+                isActive('/faq')
+                  ? 'text-cyan-400 border-b-2 border-cyan-400 pb-1'
+                  : 'text-gray-300 hover:text-cyan-400'
+              }`}
+            >
+              FAQ
+            </Link>
           </div>
         </div>
       </div>
