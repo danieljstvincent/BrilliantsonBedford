@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo02 from '../images/logo02.png';
+import AnimatedLogo from './AnimatedLogo';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -14,12 +14,8 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src={logo02} 
-              alt="Brilliants on Bedford" 
-              className="h-12 w-auto"
-            />
+          <Link to="/">
+            <AnimatedLogo />
           </Link>
 
           {/* Menu Items */}
