@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Rocket, Zap } from 'lucide-react';
+import danielImage from '../images/daniel_stvincent_3D_image.png';
 
 const AboutUs: React.FC = () => {
   return (
@@ -38,6 +39,37 @@ const AboutUs: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
             We are Brooklyn's premier micro-SaaS studio, dedicated to crafting lightning-fast solutions that solve real problems.
           </p>
+        </div>
+      </div>
+
+      {/* About Daniel Section */}
+      <div className="relative container mx-auto px-6 py-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-12 bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-sm rounded-3xl border border-purple-500/30">
+            <div className="flex-shrink-0">
+              <img 
+                src={danielImage} 
+                alt="Daniel St. Vincent" 
+                className="w-64 h-64 rounded-full object-cover border-4 border-purple-400/50 shadow-2xl"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+                About Daniel
+              </h2>
+              <div className="text-lg text-gray-300 leading-relaxed space-y-4">
+                <p>
+                  Hello, my name is Daniel St. Vincent, and I'm a Full-Stack Software Engineer with over five years of hands-on experience building clean, reliable, and user-friendly digital solutions. I earned my Bachelor's Degree in Computer Science and Emerging Technologies through the CUNY BA Program, studying at both Medgar Evers College and Lehman College. I love creating things that not only work — but work beautifully.
+                </p>
+                <p>
+                  Most recently, I worked on the Conversational AI Team at American Express here in New York City, where I helped design and improve chatbot experiences that guided card members to quick, helpful solutions. Our workflows helped reduce call volume, improve customer satisfaction, and make support feel a little more human.
+                </p>
+                <p>
+                  Today, I'm focused on helping businesses get found on Google, build trust with the people searching for them, and turn clicks into paying customers. From clean website design to SEO fundamentals, performance optimization, and clear messaging, I bring both the technical skills and strategic thinking needed to help businesses stand out. Think of me as your friendly neighborhood engineer who loves turning great ideas into results.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
