@@ -21,6 +21,16 @@ const Navbar: React.FC = () => {
           {/* Menu Items */}
           <div className="flex items-center gap-8">
             <Link
+              to="/"
+              className={`text-sm font-medium transition-all duration-300 ${
+                isActive('/')
+                  ? 'text-cyan-400 border-b-2 border-cyan-400 pb-1'
+                  : 'text-gray-300 hover:text-cyan-400'
+              }`}
+            >
+              Home
+            </Link>
+            <Link
               to="/about-us"
               className={`text-sm font-medium transition-all duration-300 ${
                 isActive('/about-us')

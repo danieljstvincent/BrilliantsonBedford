@@ -132,16 +132,6 @@ const Services: React.FC = () => {
           </Link>
         </div>
       </div>
-
-      {/* Footer */}
-      <div className="relative container mx-auto px-6 py-12 border-t border-white/10">
-        <div className="text-center text-gray-400">
-          <p className="text-lg font-semibold mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            Brilliants on Bedford, LLC
-          </p>
-          <p>Brooklyn, NY • Creating Micro-SaaS Excellence</p>
-        </div>
-      </div>
     </div>
   );
 };
