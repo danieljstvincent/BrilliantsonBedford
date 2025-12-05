@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight } from 'lucide-react';
-
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -61,7 +59,6 @@ const ContactUs: React.FC = () => {
       <div className="relative container mx-auto px-6 pt-20 pb-12">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
             <span className="text-sm font-medium bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               Get In Touch
             </span>
@@ -139,7 +136,6 @@ const ContactUs: React.FC = () => {
               className="group w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Send Message
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </form>
         </div>

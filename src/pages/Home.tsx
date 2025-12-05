@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, Zap, ArrowRight, Sparkles } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -76,7 +75,6 @@ const Home: React.FC = () => {
       <div className="relative container mx-auto px-6 pt-20 pb-32">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
             <span className="text-sm font-medium bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               Web Design Agency & SaaS Development Studio
             </span>
@@ -98,7 +96,6 @@ const Home: React.FC = () => {
               onClick={scrollToContact}
               className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
               Start Your Project
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>
@@ -198,7 +195,6 @@ const Home: React.FC = () => {
       <div className="relative container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="group p-8 bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
-            <Sparkles className="w-12 h-12 mb-4 text-purple-400 group-hover:text-pink-400 transition-colors" />
             <h3 className="text-2xl font-bold mb-3">Luxury Design</h3>
             <p className="text-gray-300">
               Elegant, sophisticated websites that showcase your jewelry and watches like works of art.
@@ -206,7 +202,6 @@ const Home: React.FC = () => {
           </div>
 
           <div className="group p-8 bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-            <Rocket className="w-12 h-12 mb-4 text-cyan-400 group-hover:text-blue-400 transition-colors" />
             <h3 className="text-2xl font-bold mb-3">E-Commerce Ready</h3>
             <p className="text-gray-300">
               Start selling online with secure payments, inventory management, and seamless checkout.
@@ -214,7 +209,6 @@ const Home: React.FC = () => {
           </div>
 
           <div className="group p-8 bg-gradient-to-br from-pink-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-            <Zap className="w-12 h-12 mb-4 text-pink-400 group-hover:text-purple-400 transition-colors" />
             <h3 className="text-2xl font-bold mb-3">Fast & Affordable</h3>
             <p className="text-gray-300">
               Get your professional website or online store launched in weeks, not months.
@@ -236,7 +230,6 @@ const Home: React.FC = () => {
             onClick={scrollToContact}
             className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto">
             Get Started Today
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </div>

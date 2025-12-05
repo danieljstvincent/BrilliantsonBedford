@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Privacy: React.FC = () => {
@@ -33,7 +32,6 @@ const Privacy: React.FC = () => {
       <div className="relative container mx-auto px-6 pt-20 pb-32">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
-            <Shield className="w-4 h-4 text-cyan-400 animate-pulse" />
             <span className="text-sm font-medium bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               Your Privacy Matters
             </span>

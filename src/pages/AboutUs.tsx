@@ -1,6 +1,6 @@
 import React from 'react';
-import { Sparkles, Rocket, Zap, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 import danielImage from '../images/daniel_stvincent_3D_image.png';
 
 const AboutUs: React.FC = () => {
@@ -25,7 +25,6 @@ const AboutUs: React.FC = () => {
       <div className="relative container mx-auto px-6 pt-20 pb-12">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
             <span className="text-sm font-medium bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               About Brilliants on Bedford
             </span>
@@ -100,7 +99,6 @@ const AboutUs: React.FC = () => {
       <div className="relative container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="group p-8 bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
-            <Rocket className="w-12 h-12 mb-4 text-purple-400 group-hover:text-pink-400 transition-colors" />
             <h3 className="text-2xl font-bold mb-3">Speed & Efficiency</h3>
             <p className="text-gray-300">
               We move fast without breaking things. Our streamlined processes ensure your 
@@ -109,7 +107,6 @@ const AboutUs: React.FC = () => {
           </div>
           
           <div className="group p-8 bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-            <Zap className="w-12 h-12 mb-4 text-cyan-400 group-hover:text-blue-400 transition-colors" />
             <h3 className="text-2xl font-bold mb-3">Innovation First</h3>
             <p className="text-gray-300">
               We stay at the cutting edge of technology, using the latest tools and frameworks 
@@ -118,7 +115,6 @@ const AboutUs: React.FC = () => {
           </div>
           
           <div className="group p-8 bg-gradient-to-br from-pink-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-            <Sparkles className="w-12 h-12 mb-4 text-pink-400 group-hover:text-purple-400 transition-colors" />
             <h3 className="text-2xl font-bold mb-3">Brooklyn Roots</h3>
             <p className="text-gray-300">
               Proudly based in Brooklyn, we bring local expertise and a global perspective to 
@@ -142,7 +138,6 @@ const AboutUs: React.FC = () => {
             className="group inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
           >
             Let's Get Started
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

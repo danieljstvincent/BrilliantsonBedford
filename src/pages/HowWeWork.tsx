@@ -1,11 +1,9 @@
 import React from 'react';
-import { Sparkles, Search, Palette, Code2, Rocket, Headphones, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HowWeWork: React.FC = () => {
   const steps = [
     {
-      icon: Search,
       title: 'Discovery & Planning',
       description: 'We start by understanding your vision, target audience, and business goals. Through detailed discussions, we create a comprehensive project plan and roadmap.',
       gradient: 'from-purple-900/30 to-pink-900/30',
@@ -13,7 +11,6 @@ const HowWeWork: React.FC = () => {
       iconColor: 'text-purple-400 group-hover:text-pink-400'
     },
     {
-      icon: Palette,
       title: 'Design & Prototyping',
       description: 'Our design process focuses on user experience and modern aesthetics. We create wireframes, mockups, and interactive prototypes to ensure the design meets your expectations.',
       gradient: 'from-cyan-900/30 to-blue-900/30',
@@ -21,7 +18,6 @@ const HowWeWork: React.FC = () => {
       iconColor: 'text-cyan-400 group-hover:text-blue-400'
     },
     {
-      icon: Code2,
       title: 'Development',
       description: 'Using agile methodologies, we build your micro-SaaS with clean, scalable code. We maintain regular communication and provide updates throughout the development process.',
       gradient: 'from-pink-900/30 to-purple-900/30',
@@ -29,7 +25,6 @@ const HowWeWork: React.FC = () => {
       iconColor: 'text-pink-400 group-hover:text-purple-400'
     },
     {
-      icon: Rocket,
       title: 'Testing & Launch',
       description: 'We conduct thorough testing to ensure everything works perfectly. Once approved, we handle deployment, domain setup, and launch your micro-SaaS to the world.',
       gradient: 'from-purple-900/30 to-cyan-900/30',
@@ -37,7 +32,6 @@ const HowWeWork: React.FC = () => {
       iconColor: 'text-purple-400 group-hover:text-cyan-400'
     },
     {
-      icon: Headphones,
       title: 'Support & Maintenance',
       description: 'After launch, we provide ongoing support, monitoring, and maintenance. We\'re here to help with updates, new features, and any issues that arise.',
       gradient: 'from-cyan-900/30 to-pink-900/30',
@@ -67,7 +61,6 @@ const HowWeWork: React.FC = () => {
       <div className="relative container mx-auto px-6 pt-20 pb-32">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
-            <Sparkles className="w-4 h-4 text-cyan-400 animate-pulse" />
             <span className="text-sm font-medium bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               Our Process
             </span>
@@ -90,7 +83,6 @@ const HowWeWork: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
             {steps.map((step, index) => {
-              const IconComponent = step.icon;
               return (
                 <div
                   key={index}
@@ -101,9 +93,6 @@ const HowWeWork: React.FC = () => {
                   
                   <div className="flex flex-col md:flex-row items-start md:items-center gap-6 relative z-10">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center border-2 border-white/20 group-hover:border-white/40 group-hover:bg-white/20 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
-                        <IconComponent className={`w-8 h-8 ${step.iconColor} transition-all duration-300 group-hover:scale-110`} />
-                      </div>
                       <div className="mt-4 text-3xl font-bold text-white/20 group-hover:text-white/40 transition-colors duration-300">
                         {String(index + 1).padStart(2, '0')}
                       </div>
@@ -178,7 +167,6 @@ const HowWeWork: React.FC = () => {
             className="group/btn relative z-10 inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:from-purple-500 hover:to-cyan-500 overflow-hidden"
           >
             <span className="relative z-10">Get Started</span>
-            <ArrowRight className="w-6 h-6 group-hover/btn:translate-x-1 transition-transform relative z-10" />
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </div>

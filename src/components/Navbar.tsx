@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import AnimatedLogo from './AnimatedLogo';
-import { ChevronDown } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -52,11 +51,6 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 About Us
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    isAboutDropdownOpen ? 'rotate-180' : ''
-                  }`}
-                />
               </Link>
 
               {/* Dropdown Menu */}
