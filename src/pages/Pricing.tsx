@@ -5,34 +5,36 @@ import { Link } from 'react-router-dom';
 const Pricing: React.FC = () => {
   const plans = [
     {
-      name: 'Starter',
-      price: '$5,000',
-      description: 'Perfect for MVPs and proof of concepts',
+      name: 'Lump Sum',
+      price: '$3,500',
+      priceNote: '+$25/mo Hosting',
+      description: 'One-time payment for complete website',
       features: [
-        'Basic MVP development',
-        'Up to 3 core features',
-        'Responsive design',
-        'Basic deployment',
-        '2 weeks delivery',
-        'Email support'
+        'Custom Design & Development',
+        '$25/month Website Hosting',
+        '$100 Fee Per Additional Page After 5',
+        'Optional Unlimited Edits Add-On (+$50/mo)',
+        'Optional Blog Integration (+$250)',
+        '24/7 Customer Support',
+        'Lifetime Updates & Maintenance'
       ],
       gradient: 'from-purple-900/30 to-pink-900/30',
       border: 'border-purple-500/20 hover:border-purple-500/50',
       buttonGradient: 'from-purple-600 to-pink-600'
     },
     {
-      name: 'Professional',
-      price: '$15,000',
-      description: 'Ideal for growing micro-SaaS businesses',
+      name: 'Monthly',
+      price: '$150',
+      priceNote: 'Per Month',
+      description: 'Monthly subscription with ongoing support',
       features: [
-        'Full-stack development',
-        'Up to 8 core features',
-        'Advanced UI/UX design',
-        'Cloud deployment',
-        'Database architecture',
-        'API integration',
-        '4 weeks delivery',
-        'Priority support'
+        'Custom Design & Development',
+        'Website Hosting Included',
+        '$100 Fee Per Additional Page After 5',
+        'Optional Blog Integration (+$250)',
+        'Unlimited Content Edits',
+        '24/7 Customer Support',
+        'Lifetime Updates & Maintenance'
       ],
       gradient: 'from-cyan-900/30 to-blue-900/30',
       border: 'border-cyan-500/20 hover:border-cyan-500/50',
@@ -40,18 +42,18 @@ const Pricing: React.FC = () => {
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'Tailored solutions for complex requirements',
+      name: 'Ecommerce',
+      price: '$7K',
+      priceNote: 'Starting',
+      description: 'Complete Shopify e-commerce solution',
       features: [
-        'Custom architecture',
-        'Unlimited features',
-        'Premium design system',
-        'Scalable infrastructure',
-        'Advanced security',
-        'Performance optimization',
-        'Custom timeline',
-        'Dedicated support team'
+        'Custom Shopify Store Design',
+        'Configure Apps & Extensions',
+        'Integrated Shipping',
+        'Shopify CMS Training & Tutorial',
+        'Fully Editable In Shopify CMS',
+        'Optional Unlimited Edits Add-On (+$50/mo)',
+        '24/7 Customer Support'
       ],
       gradient: 'from-pink-900/30 to-purple-900/30',
       border: 'border-pink-500/20 hover:border-pink-500/50',
@@ -77,7 +79,7 @@ const Pricing: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative container mx-auto px-6 pt-20 pb-32">
+      <div className="relative container mx-auto px-6 pt-20 pb-12">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-cyan-400" />
@@ -85,21 +87,21 @@ const Pricing: React.FC = () => {
               Pricing Plans
             </span>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               Pricing
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Transparent pricing for micro-SaaS development. Choose the plan that fits your needs.
+            Transparent pricing for jewelry and watch store websites. Choose the plan that fits your business.
           </p>
         </div>
       </div>
 
       {/* Pricing Cards */}
-      <div className="relative container mx-auto px-6 py-20">
+      <div className="relative container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div
@@ -119,6 +121,9 @@ const Pricing: React.FC = () => {
                 <div className="text-5xl font-bold mb-2 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
                   {plan.price}
                 </div>
+                {plan.priceNote && (
+                  <p className="text-cyan-400 text-sm font-semibold mb-2">{plan.priceNote}</p>
+                )}
                 <p className="text-gray-400">{plan.description}</p>
               </div>
 
@@ -150,8 +155,8 @@ const Pricing: React.FC = () => {
             Need a Custom Solution?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            All plans can be customized to fit your specific requirements. 
-            Contact us to discuss your project and get a tailored quote.
+            All plans can be customized for your jewelry or watch store.
+            Contact us to discuss your business and get a tailored quote.
           </p>
           <Link
             to="/contact-us"

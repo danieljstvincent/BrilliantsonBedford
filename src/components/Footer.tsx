@@ -4,14 +4,14 @@ import AnimatedLogo from './AnimatedLogo';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900/80 backdrop-blur-md border-t border-white/10">
+    <footer className="backdrop-blur-md border-t border-white/10" style={{ backgroundColor: '#181736' }}>
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="col-span-1">
             <AnimatedLogo />
-            <p className="text-gray-400 text-sm mt-4">
-              Expert watch repair and restoration services in New York City.
+            <p className="text-gray-400 text-sm mt-4 hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-400 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent transition-all duration-300 cursor-default">
+              Web design agency specializing in building SaaS products and custom digital solutions in New York City.
             </p>
           </div>
 
@@ -111,8 +111,8 @@ const Footer: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
-                  <p className="text-gray-300 text-sm">Monday - Friday</p>
-                  <p className="text-gray-400 text-sm">9:00 AM - 5:00 PM EST</p>
+                  <p className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-semibold">Monday - Friday</p>
+                  <p className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-semibold">9:00 AM - 5:00 PM EST</p>
                 </div>
               </div>
             </div>

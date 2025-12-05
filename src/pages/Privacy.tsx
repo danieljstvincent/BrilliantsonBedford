@@ -84,8 +84,8 @@ const Privacy: React.FC = () => {
               <div className="text-gray-300 space-y-4">
                 <p>We use the information we collect for the following purposes:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>To provide and improve our watch repair and restoration services</li>
-                  <li>To communicate with you about your service requests and inquiries</li>
+                  <li>To provide and improve our web design and SaaS development services</li>
+                  <li>To communicate with you about your project requests and inquiries</li>
                   <li>To send you updates, newsletters, and promotional materials (with your consent)</li>
                   <li>To process payments and manage billing</li>
                   <li>To analyze website usage and improve our online experience</li>

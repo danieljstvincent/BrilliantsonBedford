@@ -80,15 +80,15 @@ const Terms: React.FC = () => {
               </h2>
               <div className="text-gray-300 space-y-4">
                 <p>
-                  Brilliants on Bedford provides professional watch repair, restoration, and maintenance services. Our services include but are not limited to:
+                  Brilliants on Bedford is a web design agency specializing in building SaaS products and custom digital solutions. Our services include but are not limited to:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Watch repair and maintenance</li>
-                  <li>Watch restoration and refinishing</li>
-                  <li>Battery replacement and servicing</li>
-                  <li>Movement repair and overhaul</li>
-                  <li>Custom watch modifications</li>
-                  <li>Consultation and appraisal services</li>
+                  <li>Web design and development</li>
+                  <li>SaaS product development</li>
+                  <li>Custom web applications</li>
+                  <li>API development and integration</li>
+                  <li>UI/UX design services</li>
+                  <li>Consultation and technical advisory</li>
                 </ul>
                 <p>
                   We reserve the right to modify, suspend, or discontinue any aspect of our Services at any time without prior notice.

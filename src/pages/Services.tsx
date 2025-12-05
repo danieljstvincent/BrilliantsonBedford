@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Rocket, Zap, Sparkles, Database, Cloud, Shield, ArrowRight } from 'lucide-react';
+import { Code2, Rocket, Zap, Sparkles, Database, Cloud, Shield, ArrowRight, Check, Globe, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
@@ -88,13 +88,13 @@ const Services: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Comprehensive micro-SaaS development services from concept to production
+            Professional web design and e-commerce solutions tailored for jewelry stores and watch retailers
           </p>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div className="relative container mx-auto px-6 py-20">
+      <div className="relative container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
@@ -114,6 +114,154 @@ const Services: React.FC = () => {
         </div>
       </div>
 
+      {/* Service Packages Section */}
+      <div className="relative container mx-auto px-6 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+            Popular Service Packages
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Complete solutions tailored to your business needs
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Full Stack 5 Page Website */}
+          <div className="p-8 bg-gradient-to-br from-purple-900/40 to-cyan-900/40 backdrop-blur-sm rounded-3xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <Globe className="w-10 h-10 text-purple-400" />
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+                Full Stack 5 Page Website
+              </h3>
+            </div>
+            <p className="text-gray-300 mb-6 text-lg">
+              Perfect for jewelry stores and watch retailers looking to establish a stunning online presence that showcases your collection.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">5 Custom Pages (Home, About, Services, Contact, etc.)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Mobile Friendly & Fully Responsive Design</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Optimized Page Speed & Performance</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">SEO Optimized (Meta tags, Schema markup, Sitemap)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Contact Form Integration</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Google Analytics Setup</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Custom UI/UX Design</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Cross-Browser Compatibility</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Cloud Hosting & Deployment</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">SSL Certificate (HTTPS)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Content Management System</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">30 Days Post-Launch Support</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Shopify E-Commerce Website */}
+          <div className="p-8 bg-gradient-to-br from-cyan-900/40 to-purple-900/40 backdrop-blur-sm rounded-3xl border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <ShoppingCart className="w-10 h-10 text-cyan-400" />
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+                Shopify E-Commerce Website
+              </h3>
+            </div>
+            <p className="text-gray-300 mb-6 text-lg">
+              Complete e-commerce solution for jewelry and watch retailers to start selling online with secure payments and inventory management.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Custom Shopify Theme Design</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Mobile Friendly & Fully Responsive</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Optimized Page Speed & Performance</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">SEO Optimized for E-Commerce</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Product Catalog Setup (Up to 50 products)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Shopping Cart & Checkout Integration</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Payment Gateway Setup (Stripe, PayPal, etc.)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Inventory Management System</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Customer Account Portal</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Email Marketing Integration</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Shipping & Tax Configuration</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">SSL Certificate & Security Setup</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">Google Analytics & Facebook Pixel</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">30 Days Post-Launch Support & Training</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="relative container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center p-12 bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-sm rounded-3xl border border-purple-500/30">
@@ -121,7 +269,7 @@ const Services: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how we can help bring your micro-SaaS idea to life
+            Let's discuss how we can help grow your jewelry or watch business online
           </p>
           <Link
             to="/contact-us"

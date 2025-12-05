@@ -58,7 +58,7 @@ const ContactUs: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative container mx-auto px-6 pt-20 pb-32">
+      <div className="relative container mx-auto px-6 pt-20 pb-12">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-cyan-400" />
@@ -66,13 +66,13 @@ const ContactUs: React.FC = () => {
               Get In Touch
             </span>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Contact US
+              Contact Us
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
             Tell us about your project and we'll get back to you within 24 hours
           </p>
@@ -80,7 +80,7 @@ const ContactUs: React.FC = () => {
       </div>
 
       {/* Contact Form */}
-      <div id="contact-form" className="relative container mx-auto px-6 py-20">
+      <div id="contact-form" className="relative container mx-auto px-6 py-12">
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
             <div>
@@ -130,7 +130,7 @@ const ContactUs: React.FC = () => {
                 required
                 rows={5}
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition-colors text-white placeholder-gray-500 resize-none"
-                placeholder="Tell us about your micro-SaaS idea..."
+                placeholder="Tell us about your jewelry/watch store and what you need..."
               />
             </div>
 

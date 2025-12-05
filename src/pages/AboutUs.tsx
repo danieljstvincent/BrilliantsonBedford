@@ -22,7 +22,7 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative container mx-auto px-6 pt-20 pb-32">
+      <div className="relative container mx-auto px-6 pt-20 pb-12">
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-cyan-400" />
@@ -30,21 +30,21 @@ const AboutUs: React.FC = () => {
               About Brilliants on Bedford
             </span>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               About Us
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            We are Brooklyn's premier micro-SaaS studio, dedicated to crafting lightning-fast solutions that solve real problems.
+            We are Brooklyn's premier web design agency and micro-SaaS studio, dedicated to crafting lightning-fast solutions that solve real problems.
           </p>
         </div>
       </div>
 
       {/* About Daniel Section */}
-      <div className="relative container mx-auto px-6 py-20">
+      <div className="relative container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-12 bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-sm rounded-3xl border border-purple-500/30">
             <div className="flex-shrink-0">

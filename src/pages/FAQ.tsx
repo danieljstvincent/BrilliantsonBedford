@@ -14,6 +14,10 @@ const FAQ: React.FC = () => {
 
   const faqs = [
     {
+      question: 'What is the relationship between brillford.com and Brilliants on Bedford?',
+      answer: 'Brillford.com is owned and operated by Brilliants on Bedford, LLC. "Brillford" is simply a shortened, easy-to-remember version of our full company name, Brilliants on Bedford. Both names refer to the same Brooklyn-based web design agency, and you can trust that you\'re working with the same professional team regardless of which name you see.'
+    },
+    {
       question: 'How long does it take to build a micro-SaaS?',
       answer: 'The timeline depends on the complexity of your project. Our Starter plan typically takes 2 weeks, Professional plans take 4 weeks, and Enterprise solutions are customized based on your specific requirements. We focus on rapid development without compromising quality.'
     },
