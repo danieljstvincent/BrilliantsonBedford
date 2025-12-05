@@ -1,11 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import ContactUs from './pages/ContactUs';
+import FAQ from './pages/FAQ';
+import HowWeWork from './pages/HowWeWork';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 export default function App() {
   return (
@@ -17,7 +22,12 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/how-we-work" element={<HowWeWork />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

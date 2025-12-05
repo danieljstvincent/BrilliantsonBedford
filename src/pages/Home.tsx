@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Code2, Rocket, Zap, ArrowRight, Sparkles } from 'lucide-react';
+import { Rocket, Zap, ArrowRight, Sparkles } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -78,19 +78,19 @@ const Home: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-8 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-cyan-400" />
             <span className="text-sm font-medium bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
-              Brooklyn's Premier Micro-SaaS Studio
+              Web Design Agency & SaaS Development Studio
             </span>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               Brilliants on Bedford
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            We craft lightning-fast micro-SaaS companies that solve real problems. 
-            From concept to production in record time.
+            Specializing in stunning websites and e-commerce solutions for jewelry stores, watch retailers, and luxury brands.
+            Transform your business with a professional online presence.
           </p>
           
           <div className="flex justify-center">
@@ -112,19 +112,85 @@ const Home: React.FC = () => {
           </h2>
           <p className="text-gray-400 text-lg">Built with cutting-edge technologies</p>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          {['React', 'Django', 'TypeScript', 'Python'].map((tech) => (
-            <div 
-              key={tech}
-              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20"
-            >
-              <div className="text-center">
-                <Code2 className="w-12 h-12 mx-auto mb-4 text-cyan-400 group-hover:text-purple-400 transition-colors" />
-                <h3 className="font-bold text-lg">{tech}</h3>
-              </div>
+          {/* React */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="2" fill="url(#react-gradient)"/>
+                <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#react-gradient)" strokeWidth="1" fill="none"/>
+                <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#react-gradient)" strokeWidth="1" fill="none" transform="rotate(60 12 12)"/>
+                <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#react-gradient)" strokeWidth="1" fill="none" transform="rotate(120 12 12)"/>
+                <defs>
+                  <linearGradient id="react-gradient" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stopColor="#a855f7"/>
+                    <stop offset="100%" stopColor="#06b6d4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h3 className="font-bold text-lg">React</h3>
             </div>
-          ))}
+          </div>
+
+          {/* Django */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 3h4v18H7c-1.5 0-2.5-1-2.5-2.5V5.5C4.5 4 5.5 3 7 3z" fill="url(#django-gradient)"/>
+                <rect x="8" y="5" width="2" height="8" rx="1" fill="white"/>
+                <circle cx="9" cy="16" r="1.5" fill="white"/>
+                <path d="M13 3h4c1.5 0 2.5 1 2.5 2.5v13c0 1.5-1 2.5-2.5 2.5h-4V3z" fill="url(#django-gradient)"/>
+                <path d="M15 5c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2s-2-.9-2-2V7c0-1.1.9-2 2-2z" fill="white"/>
+                <circle cx="15" cy="16" r="1.5" fill="white"/>
+                <defs>
+                  <linearGradient id="django-gradient" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stopColor="#ec4899"/>
+                    <stop offset="100%" stopColor="#a855f7"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h3 className="font-bold text-lg">Django</h3>
+            </div>
+          </div>
+
+          {/* TypeScript */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="2" fill="url(#typescript-gradient)"/>
+                <path d="M11 8H9v8h2v-3h2c1.1 0 2-.9 2-2v-1c0-1.1-.9-2-2-2h-2zm0 3v-1h2v1h-2zM17 8h-2v1h2v1h-2v1h2v1h-2v4h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z" fill="white"/>
+                <defs>
+                  <linearGradient id="typescript-gradient" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stopColor="#06b6d4"/>
+                    <stop offset="100%" stopColor="#a855f7"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h3 className="font-bold text-lg">TypeScript</h3>
+            </div>
+          </div>
+
+          {/* Python */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.5 2 8 2.3 8 4v2h4v.5H6.5C4.5 6.5 3 7.8 3 10v4c0 2.2 1.5 3.5 3.5 3.5H8v-2.5c0-2 1.5-3.5 3.5-3.5h5c1.7 0 3-.8 3-2.5V4c0-1.7-1.3-2-4-2h-3.5zm-1.5 1.5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z" fill="url(#python-gradient-1)"/>
+                <path d="M12 22c3.5 0 4-.3 4-2v-2h-4v-.5h5.5c2 0 3.5-1.3 3.5-3.5v-4c0-2.2-1.5-3.5-3.5-3.5H16v2.5c0 2-1.5 3.5-3.5 3.5h-5c-1.7 0-3 .8-3 2.5v6c0 1.7 1.3 2 4 2h3.5zm1.5-1.5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" fill="url(#python-gradient-2)"/>
+                <defs>
+                  <linearGradient id="python-gradient-1" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stopColor="#a855f7"/>
+                    <stop offset="100%" stopColor="#ec4899"/>
+                  </linearGradient>
+                  <linearGradient id="python-gradient-2" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stopColor="#ec4899"/>
+                    <stop offset="100%" stopColor="#06b6d4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h3 className="font-bold text-lg">Python</h3>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -132,26 +198,26 @@ const Home: React.FC = () => {
       <div className="relative container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="group p-8 bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
-            <Rocket className="w-12 h-12 mb-4 text-purple-400 group-hover:text-pink-400 transition-colors" />
-            <h3 className="text-2xl font-bold mb-3">Rapid Development</h3>
+            <Sparkles className="w-12 h-12 mb-4 text-purple-400 group-hover:text-pink-400 transition-colors" />
+            <h3 className="text-2xl font-bold mb-3">Luxury Design</h3>
             <p className="text-gray-300">
-              Launch your micro-SaaS in weeks, not months. We move fast without breaking things.
+              Elegant, sophisticated websites that showcase your jewelry and watches like works of art.
             </p>
           </div>
-          
+
           <div className="group p-8 bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-            <Zap className="w-12 h-12 mb-4 text-cyan-400 group-hover:text-blue-400 transition-colors" />
-            <h3 className="text-2xl font-bold mb-3">Scalable Architecture</h3>
+            <Rocket className="w-12 h-12 mb-4 text-cyan-400 group-hover:text-blue-400 transition-colors" />
+            <h3 className="text-2xl font-bold mb-3">E-Commerce Ready</h3>
             <p className="text-gray-300">
-              Built to grow with you. Start small, scale infinitely with our robust infrastructure.
+              Start selling online with secure payments, inventory management, and seamless checkout.
             </p>
           </div>
-          
+
           <div className="group p-8 bg-gradient-to-br from-pink-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-            <Sparkles className="w-12 h-12 mb-4 text-pink-400 group-hover:text-purple-400 transition-colors" />
-            <h3 className="text-2xl font-bold mb-3">Brooklyn Made</h3>
+            <Zap className="w-12 h-12 mb-4 text-pink-400 group-hover:text-purple-400 transition-colors" />
+            <h3 className="text-2xl font-bold mb-3">Fast & Affordable</h3>
             <p className="text-gray-300">
-              Local expertise with global reach. Based in Brooklyn, serving clients worldwide.
+              Get your professional website or online store launched in weeks, not months.
             </p>
           </div>
         </div>
@@ -164,7 +230,7 @@ const Home: React.FC = () => {
             Ready to Build Something Brilliant?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's turn your idea into a profitable micro-SaaS
+            Ready to attract more customers and grow your jewelry or watch business online?
           </p>
           <button 
             onClick={scrollToContact}
@@ -235,7 +301,7 @@ const Home: React.FC = () => {
                 required
                 rows={5}
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition-colors text-white placeholder-gray-500 resize-none"
-                placeholder="Tell us about your micro-SaaS idea..."
+                placeholder="Tell us about your jewelry/watch store and what you need..."
               />
             </div>
 
@@ -246,16 +312,6 @@ const Home: React.FC = () => {
               Send Message
             </button>
           </form>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="relative container mx-auto px-6 py-12 border-t border-white/10">
-        <div className="text-center text-gray-400">
-          <p className="text-lg font-semibold mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            Brilliants on Bedford, LLC
-          </p>
-          <p>Brooklyn, NY • Creating Micro-SaaS Excellence</p>
         </div>
       </div>
     </div>
