@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Code, Smartphone, ShoppingBag, Globe, Search, Share2, Mail, DollarSign } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -80,15 +81,23 @@ const Home: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Brilliants on Bedford
-            </span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <div className="block mb-2">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
+                Get More
+              </span>
+            </div>
+            <div className="relative inline-block min-h-[1.2em]">
+              <span className="word-rotate bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
+                <span>Customers</span>
+                <span>Sales</span>
+                <span>Revenue</span>
+              </span>
+            </div>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Specializing in stunning websites and e-commerce solutions for jewelry stores, watch retailers, and luxury brands.
-            Transform your business with a professional online presence.
+            Turn online browsers into in-store customers. Get more people walking through your jewelry or watch store with a website that showcases your pieces beautifully and drives real business growth.
           </p>
           
           <div className="flex justify-center">
@@ -101,91 +110,101 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* Tech Stack */}
+      {/* Services Section */}
       <div className="relative container mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Our Tech Stack
+            Our Services
           </h2>
-          <p className="text-gray-400 text-lg">Built with cutting-edge technologies</p>
+          <p className="text-gray-400 text-lg">Comprehensive digital solutions for your business</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          {/* React */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {/* Website Design & Development */}
           <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
             <div className="text-center">
-              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="2" fill="url(#react-gradient)"/>
-                <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#react-gradient)" strokeWidth="1" fill="none"/>
-                <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#react-gradient)" strokeWidth="1" fill="none" transform="rotate(60 12 12)"/>
-                <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#react-gradient)" strokeWidth="1" fill="none" transform="rotate(120 12 12)"/>
-                <defs>
-                  <linearGradient id="react-gradient" x1="0" y1="0" x2="24" y2="24">
-                    <stop offset="0%" stopColor="#a855f7"/>
-                    <stop offset="100%" stopColor="#06b6d4"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <h3 className="font-bold text-lg">React</h3>
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Code className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Website Design & Development</h3>
+              <p className="text-gray-400 text-sm">Custom websites built from scratch with modern technologies</p>
             </div>
           </div>
 
-          {/* Django */}
+          {/* Mobile App Development */}
           <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
             <div className="text-center">
-              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 3h4v18H7c-1.5 0-2.5-1-2.5-2.5V5.5C4.5 4 5.5 3 7 3z" fill="url(#django-gradient)"/>
-                <rect x="8" y="5" width="2" height="8" rx="1" fill="white"/>
-                <circle cx="9" cy="16" r="1.5" fill="white"/>
-                <path d="M13 3h4c1.5 0 2.5 1 2.5 2.5v13c0 1.5-1 2.5-2.5 2.5h-4V3z" fill="url(#django-gradient)"/>
-                <path d="M15 5c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2s-2-.9-2-2V7c0-1.1.9-2 2-2z" fill="white"/>
-                <circle cx="15" cy="16" r="1.5" fill="white"/>
-                <defs>
-                  <linearGradient id="django-gradient" x1="0" y1="0" x2="24" y2="24">
-                    <stop offset="0%" stopColor="#ec4899"/>
-                    <stop offset="100%" stopColor="#a855f7"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <h3 className="font-bold text-lg">Django</h3>
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Smartphone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Mobile App Development</h3>
+              <p className="text-gray-400 text-sm">Native and cross-platform mobile applications</p>
             </div>
           </div>
 
-          {/* TypeScript */}
+          {/* Shopify Development */}
           <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
             <div className="text-center">
-              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="20" height="20" rx="2" fill="url(#typescript-gradient)"/>
-                <path d="M11 8H9v8h2v-3h2c1.1 0 2-.9 2-2v-1c0-1.1-.9-2-2-2h-2zm0 3v-1h2v1h-2zM17 8h-2v1h2v1h-2v1h2v1h-2v4h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z" fill="white"/>
-                <defs>
-                  <linearGradient id="typescript-gradient" x1="0" y1="0" x2="24" y2="24">
-                    <stop offset="0%" stopColor="#06b6d4"/>
-                    <stop offset="100%" stopColor="#a855f7"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <h3 className="font-bold text-lg">TypeScript</h3>
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg group-hover:scale-110 transition-transform">
+                <ShoppingBag className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Shopify Development</h3>
+              <p className="text-gray-400 text-sm">Complete e-commerce solutions with Shopify</p>
             </div>
           </div>
 
-          {/* Python */}
+          {/* WordPress Development */}
           <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
             <div className="text-center">
-              <svg className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C8.5 2 8 2.3 8 4v2h4v.5H6.5C4.5 6.5 3 7.8 3 10v4c0 2.2 1.5 3.5 3.5 3.5H8v-2.5c0-2 1.5-3.5 3.5-3.5h5c1.7 0 3-.8 3-2.5V4c0-1.7-1.3-2-4-2h-3.5zm-1.5 1.5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z" fill="url(#python-gradient-1)"/>
-                <path d="M12 22c3.5 0 4-.3 4-2v-2h-4v-.5h5.5c2 0 3.5-1.3 3.5-3.5v-4c0-2.2-1.5-3.5-3.5-3.5H16v2.5c0 2-1.5 3.5-3.5 3.5h-5c-1.7 0-3 .8-3 2.5v6c0 1.7 1.3 2 4 2h3.5zm1.5-1.5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" fill="url(#python-gradient-2)"/>
-                <defs>
-                  <linearGradient id="python-gradient-1" x1="0" y1="0" x2="24" y2="24">
-                    <stop offset="0%" stopColor="#a855f7"/>
-                    <stop offset="100%" stopColor="#ec4899"/>
-                  </linearGradient>
-                  <linearGradient id="python-gradient-2" x1="0" y1="0" x2="24" y2="24">
-                    <stop offset="0%" stopColor="#ec4899"/>
-                    <stop offset="100%" stopColor="#06b6d4"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <h3 className="font-bold text-lg">Python</h3>
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">WordPress Development</h3>
+              <p className="text-gray-400 text-sm">Custom WordPress themes and plugin development</p>
+            </div>
+          </div>
+
+          {/* Search Engine Optimization */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Search className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Search Engine Optimization</h3>
+              <p className="text-gray-400 text-sm">Boost your online visibility and organic traffic</p>
+            </div>
+          </div>
+
+          {/* Social Media Marketing */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Share2 className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Social Media Marketing</h3>
+              <p className="text-gray-400 text-sm">Engage your audience across social platforms</p>
+            </div>
+          </div>
+
+          {/* Email Marketing */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Email Marketing</h3>
+              <p className="text-gray-400 text-sm">Targeted campaigns that convert subscribers</p>
+            </div>
+          </div>
+
+          {/* Paid Advertisement (PPC) */}
+          <div className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg group-hover:scale-110 transition-transform">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Paid Advertisement (PPC)</h3>
+              <p className="text-gray-400 text-sm">Strategic ad campaigns for maximum ROI</p>
             </div>
           </div>
         </div>
