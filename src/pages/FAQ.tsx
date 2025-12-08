@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -11,92 +12,143 @@ const FAQ: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const categories = ['All', 'Website Design', 'Custom Software', 'SEO & Marketing', 'Pricing & Billing'];
+
   const faqs = [
     {
       question: 'What is the relationship between brillford.com and Brilliants on Bedford?',
-      answer: 'Brillford.com is owned and operated by Brilliants on Bedford, LLC. "Brillford" is simply a shortened, easy-to-remember version of our full company name, Brilliants on Bedford. Both names refer to the same Brooklyn-based web design agency, and you can trust that you\'re working with the same professional team regardless of which name you see.'
+      answer: 'Brillford.com is owned and operated by Brilliants on Bedford, LLC. "Brillford" is simply a shortened, easy-to-remember version of our full company name, Brilliants on Bedford. Both names refer to the same Brooklyn-based web design agency, and you can trust that you\'re working with the same professional team regardless of which name you see.',
+      category: 'Website Design'
     },
     {
-      question: 'How long does it take to build a micro-SaaS?',
-      answer: 'The timeline depends on the complexity of your project. Our Starter plan typically takes 2 weeks, Professional plans take 4 weeks, and Enterprise solutions are customized based on your specific requirements. We focus on rapid development without compromising quality.'
+      question: 'What\'s your typical timeline from project kickoff to launch?',
+      answer: 'Most website projects are completed within 2-4 weeks from start to finish. The exact timeline depends on how quickly you provide content, images, and feedback during the design process, as well as our current development queue. Some projects wrap up in 2 weeks, while others may take closer to 3-4 weeks depending on complexity and client responsiveness.',
+      category: 'Website Design'
+    },
+    {
+      question: 'What happens to my website if I cancel my monthly subscription?',
+      answer: 'If you cancel your monthly subscription, you won\'t retain access to the website itself - otherwise everyone would subscribe for one month and cancel! However, you absolutely keep ownership of your domain name and all the content assets (images, text, logos) you provided. We never hold your domain or content hostage.',
+      category: 'Pricing & Billing'
+    },
+    {
+      question: 'Who owns the domain name?',
+      answer: 'You do! We never take domains hostage. Even if we purchase the domain on your behalf during setup, full ownership transfers to you. If you decide to cancel your subscription with us, we\'ll transfer complete domain control to you - no questions asked, no fees involved.',
+      category: 'Website Design'
+    },
+    {
+      question: 'Do you use WordPress or drag-and-drop page builders?',
+      answer: 'No, we don\'t! Every website we create is built from scratch using custom hand-written code. We don\'t rely on WordPress, Wix, Squarespace, or any page builders. This commitment to custom development is what sets us apart - we invest the time and expertise to craft unique, high-performance websites, and it shows in both the quality of our work and our clients\' online presence after launch.',
+      category: 'Website Design'
+    },
+    {
+      question: 'Why choose custom code over WordPress? What benefits does it offer?',
+      answer: 'Custom code provides significant advantages: superior security (no database vulnerabilities to exploit), lightning-fast load times, easier long-term maintenance, lower hosting costs, complete customization freedom, and zero bloat since we don\'t need plugins for every feature. Unlike WordPress sites that require constant updates to avoid security breaches and hacks, our custom sites have no databases or admin panels - there\'s simply nothing for hackers to break into. You won\'t wake up to find your site redirecting to a spam site. Plus, we\'re more responsive to your specific needs without being limited by theme or plugin constraints.',
+      category: 'Website Design'
+    },
+    {
+      question: 'How do I request changes or edits to my website?',
+      answer: 'Simply send an email to hello@brillford.com with your change requests. Your email automatically enters our support ticketing system where our team can review, prioritize, and complete your edits. Once finished, we\'ll mark the ticket as resolved and notify you. It\'s that easy!',
+      category: 'Website Design'
     },
     {
       question: 'What technologies do you use?',
-      answer: 'We primarily work with React, Django, TypeScript, and Python for full-stack development. We also use modern tools and frameworks like Tailwind CSS, PostgreSQL, and cloud deployment platforms. Our tech stack is chosen based on scalability and performance requirements.'
+      answer: 'We primarily work with React, Django, TypeScript, and Python for full-stack development. We also use modern tools and frameworks like Tailwind CSS, PostgreSQL, and cloud deployment platforms. Our tech stack is chosen based on scalability and performance requirements.',
+      category: 'Website Design'
     },
     {
       question: 'Do you provide ongoing support and maintenance?',
-      answer: 'Yes! We offer ongoing support and maintenance packages. This includes bug fixes, security updates, performance optimization, and feature additions. We can discuss a maintenance plan that fits your needs during the project consultation.'
+      answer: 'Yes! We offer ongoing support and maintenance packages. This includes bug fixes, security updates, performance optimization, and feature additions. We can discuss a maintenance plan that fits your needs during the project consultation.',
+      category: 'Website Design'
     },
     {
       question: 'Can you work with our existing team?',
-      answer: 'Absolutely! We\'re experienced in collaborating with in-house teams, other agencies, and stakeholders. We can integrate seamlessly into your workflow and communicate through your preferred channels.'
+      answer: 'Absolutely! We\'re experienced in collaborating with in-house teams, other agencies, and stakeholders. We can integrate seamlessly into your workflow and communicate through your preferred channels.',
+      category: 'Custom Software'
     },
     {
       question: 'What if I need changes after the project is complete?',
-      answer: 'We offer post-launch support and can make changes or additions to your micro-SaaS. Changes are billed based on scope and complexity. We also offer retainer packages for ongoing development work.'
+      answer: 'We offer post-launch support and can make changes or additions to your website or software. Changes are billed based on scope and complexity. We also offer retainer packages for ongoing development work.',
+      category: 'Pricing & Billing'
     },
     {
       question: 'Do you handle hosting and deployment?',
-      answer: 'Yes, we handle the complete deployment process including cloud infrastructure setup, domain configuration, and initial deployment. We can also set up CI/CD pipelines for automated deployments. Hosting costs are separate and depend on your traffic and requirements.'
+      answer: 'Yes, we handle the complete deployment process including cloud infrastructure setup, domain configuration, and initial deployment. We can also set up CI/CD pipelines for automated deployments. Hosting costs are separate and depend on your traffic and requirements.',
+      category: 'Website Design'
     },
     {
       question: 'What makes your approach different?',
-      answer: 'We specialize in rapid micro-SaaS development with a focus on getting your product to market quickly. Our Brooklyn-based team combines local expertise with modern development practices. We prioritize clean code, scalability, and user experience from day one.'
+      answer: 'We specialize in custom web development with a focus on getting your product to market quickly. Our Brooklyn-based team combines local expertise with modern development practices. We prioritize clean code, scalability, and user experience from day one.',
+      category: 'Website Design'
     },
     {
       question: 'How do I get started?',
-      answer: 'Simply reach out through our contact form or schedule a consultation. We\'ll discuss your project, requirements, timeline, and budget. After that, we\'ll provide a detailed proposal and get started on bringing your micro-SaaS idea to life!'
+      answer: 'Simply reach out through our contact form or schedule a consultation. We\'ll discuss your project, requirements, timeline, and budget. After that, we\'ll provide a detailed proposal and get started on bringing your vision to life!',
+      category: 'Website Design'
     },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept various payment methods including bank transfers, credit cards, and payment plans for larger projects. Typically, we request a deposit to begin work, with milestone payments throughout the project and a final payment upon completion. We\'re flexible and can work out a payment schedule that fits your budget.'
+      answer: 'We accept various payment methods including bank transfers, credit cards, and payment plans for larger projects. Typically, we request a deposit to begin work, with milestone payments throughout the project and a final payment upon completion. We\'re flexible and can work out a payment schedule that fits your budget.',
+      category: 'Pricing & Billing'
     },
     {
       question: 'Do you sign NDAs?',
-      answer: 'Absolutely! We take confidentiality very seriously. We\'re happy to sign NDAs before discussing your project in detail. Your ideas and business information are safe with us, and we can discuss the specifics of any confidentiality agreement you need.'
+      answer: 'Absolutely! We take confidentiality very seriously. We\'re happy to sign NDAs before discussing your project in detail. Your ideas and business information are safe with us, and we can discuss the specifics of any confidentiality agreement you need.',
+      category: 'Custom Software'
     },
     {
       question: 'Can you help with marketing and SEO?',
-      answer: 'While our primary focus is on development, we can provide guidance on SEO best practices, performance optimization, and basic marketing strategies. For comprehensive marketing services, we can connect you with trusted partners or recommend strategies that align with your micro-SaaS goals.'
+      answer: 'While our primary focus is on development, we can provide guidance on SEO best practices, performance optimization, and basic marketing strategies. For comprehensive marketing services, we can connect you with trusted partners or recommend strategies that align with your goals.',
+      category: 'SEO & Marketing'
     },
     {
       question: 'What happens if the project scope changes?',
-      answer: 'We understand that project requirements can evolve. If the scope changes significantly, we\'ll discuss the impact on timeline and budget before proceeding. We maintain transparent communication throughout the project and handle scope changes through change orders that clearly outline any additional time or cost.'
+      answer: 'We understand that project requirements can evolve. If the scope changes significantly, we\'ll discuss the impact on timeline and budget before proceeding. We maintain transparent communication throughout the project and handle scope changes through change orders that clearly outline any additional time or cost.',
+      category: 'Pricing & Billing'
     },
     {
       question: 'Do you work with international clients?',
-      answer: 'Yes! While we\'re based in Brooklyn, NY, we work with clients worldwide. We\'re experienced in remote collaboration and can accommodate different time zones. Most of our communication happens through video calls, email, and project management tools, making location irrelevant.'
+      answer: 'Yes! While we\'re based in Brooklyn, NY, we work with clients worldwide. We\'re experienced in remote collaboration and can accommodate different time zones. Most of our communication happens through video calls, email, and project management tools, making location irrelevant.',
+      category: 'Website Design'
     },
     {
       question: 'What kind of testing and quality assurance do you provide?',
-      answer: 'Quality is paramount to us. We perform comprehensive testing including unit tests, integration tests, and user acceptance testing. We also conduct thorough QA reviews for functionality, performance, security, and cross-browser compatibility before launch. We ensure your micro-SaaS is robust and ready for production.'
+      answer: 'Quality is paramount to us. We perform comprehensive testing including unit tests, integration tests, and user acceptance testing. We also conduct thorough QA reviews for functionality, performance, security, and cross-browser compatibility before launch. We ensure your website is robust and ready for production.',
+      category: 'Website Design'
     },
     {
       question: 'Can you integrate third-party services?',
-      answer: 'Absolutely! We regularly integrate with various third-party services including payment processors (Stripe, PayPal), authentication providers, email services, analytics tools, and more. We have experience with a wide range of APIs and can integrate whatever services your micro-SaaS needs to function effectively.'
+      answer: 'Absolutely! We regularly integrate with various third-party services including payment processors (Stripe, PayPal), authentication providers, email services, analytics tools, and more. We have experience with a wide range of APIs and can integrate whatever services your website or application needs to function effectively.',
+      category: 'Website Design'
     },
     {
       question: 'Do you provide training or documentation?',
-      answer: 'Yes! We provide comprehensive documentation for your codebase, APIs, and deployment processes. We can also provide training sessions for your team on how to maintain and extend the application. We want you to feel confident managing your micro-SaaS after launch.'
+      answer: 'Yes! We provide comprehensive documentation for your codebase, APIs, and deployment processes. We can also provide training sessions for your team on how to maintain and extend the application. We want you to feel confident managing your website after launch.',
+      category: 'Website Design'
     },
     {
       question: 'What if I\'m not satisfied with the work?',
-      answer: 'Customer satisfaction is our top priority. We work closely with you throughout the project with regular check-ins and demos to ensure we\'re aligned. If there are any issues, we\'ll work together to resolve them. Our goal is to deliver exactly what you envision, and we\'re committed to making that happen.'
+      answer: 'Customer satisfaction is our top priority. We work closely with you throughout the project with regular check-ins and demos to ensure we\'re aligned. If there are any issues, we\'ll work together to resolve them. Our goal is to deliver exactly what you envision, and we\'re committed to making that happen.',
+      category: 'Website Design'
     },
     {
       question: 'Do you build mobile apps?',
-      answer: 'While we primarily focus on web-based micro-SaaS solutions, we can build responsive web applications that work beautifully on mobile devices. For native mobile apps, we can discuss the requirements and either develop them or connect you with specialists. Many of our web applications are mobile-optimized and function like native apps.'
+      answer: 'While we primarily focus on web-based solutions, we can build responsive web applications that work beautifully on mobile devices. For native mobile apps, we can discuss the requirements and either develop them or connect you with specialists. Many of our web applications are mobile-optimized and function like native apps.',
+      category: 'Custom Software'
     },
     {
       question: 'How do you handle data security and privacy?',
-      answer: 'Security is built into everything we do. We follow best practices for data encryption, secure authentication, and comply with relevant privacy regulations like GDPR and CCPA. We can implement security measures appropriate for your data sensitivity level and help you understand compliance requirements for your specific use case.'
+      answer: 'Security is built into everything we do. We follow best practices for data encryption, secure authentication, and comply with relevant privacy regulations like GDPR and CCPA. We can implement security measures appropriate for your data sensitivity level and help you understand compliance requirements for your specific use case.',
+      category: 'Website Design'
     }
   ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const filteredFaqs = activeCategory === 'All'
+    ? faqs
+    : faqs.filter(faq => faq.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden pt-20">
@@ -137,11 +189,35 @@ const FAQ: React.FC = () => {
         </div>
       </div>
 
+      {/* Category Tabs */}
+      <div className="relative container mx-auto px-6 pb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setActiveCategory(category);
+                  setOpenIndex(null);
+                }}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                  activeCategory === category
+                    ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/50'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white border border-white/20'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* FAQ Section */}
       <div className="relative container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
+            {filteredFaqs.map((faq, index) => (
               <div
                 key={index}
                 className={`bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border overflow-hidden transition-all duration-500 ${
